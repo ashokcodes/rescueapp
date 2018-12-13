@@ -1,0 +1,8 @@
+# Turn Rewrite Engine ON
+RewriteEngine on
+
+Options -Multiviews
+# Rewrite for addition.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/?page_id=$1 [L]
